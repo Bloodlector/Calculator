@@ -45,7 +45,7 @@ export default {
       console.log('click', str, evnt)
     },
     onValidate(){
-      console.log('Validation!')
+      
     },
     multiply(){
 if (this.operand2==0){
