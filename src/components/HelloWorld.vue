@@ -83,10 +83,10 @@ export default {
           this.divide();
           break;
         case '*':
-          this.divide();
+          this.multiply();
           break;
         case 'Степень':
-          this.multiply();
+          this.grade();
           break;
         case 'Int /':
           this.divideP();
@@ -104,7 +104,7 @@ export default {
     onValidate(){
       console.log('Validation!')
     },
-    multiply(){
+    grade(){
       if (this.operand2==0){
         alert("степень должна быть больше 0!")
       } else {
@@ -116,6 +116,9 @@ export default {
         }
       this.operand1 = +op;
 }
+    },
+    multiply(){
+      this.result = +this.operand1 * +this.operand2;
     },
     divideP(){
       if (this.operand2==0){
@@ -133,6 +136,7 @@ export default {
         this.result = +this.operand1 / +this.operand2;
       }
     },
+
     setValueOperand(op){
       if(this.picked && this.picked == "operand1" && op !== "Del"){
         // console.log(this.picked)
